@@ -12,6 +12,10 @@ public class InputOutputConsole implements InputOutputConsoleInterface {
         this.output = output;
     }
 
+    public InputOutputConsole() {
+        this(new Scanner(System.in), System.out);
+    }
+
     @Override
     public void setScanner(Scanner scanner) {
         this.input = scanner;
