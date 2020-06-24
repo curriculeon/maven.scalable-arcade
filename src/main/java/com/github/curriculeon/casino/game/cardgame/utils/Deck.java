@@ -1,4 +1,8 @@
-package com.github.curriculeon.cardutilities;
+package com.github.curriculeon.casino.game.cardgame.utils;
+
+import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.Rank;
+import com.github.curriculeon.casino.game.cardgame.utils.card.Suit;
 
 import java.util.Collections;
 import java.util.Iterator;

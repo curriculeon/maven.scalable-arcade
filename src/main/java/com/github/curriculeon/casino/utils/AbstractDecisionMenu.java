@@ -1,4 +1,4 @@
-package com.github.curriculeon;
+package com.github.curriculeon.casino.utils;
 
 import com.github.curriculeon.utils.InputOutputConsole;
 import com.github.curriculeon.utils.StringUtils;

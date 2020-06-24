@@ -1,7 +1,7 @@
-package com.github.curriculeon;
+package com.github.curriculeon.casino.game;
 
 
-import com.github.curriculeon.profile.ProfileInterface;
+import com.github.curriculeon.casino.profile.ProfileInterface;
 
 /**
  * Created by leon on 5/11/17.

@@ -1,4 +1,4 @@
-package com.github.curriculeon.cardutilities;
+package com.github.curriculeon.casino.game.cardgame.utils.card;
 
 public enum Rank {
     LOW_ACE(1),

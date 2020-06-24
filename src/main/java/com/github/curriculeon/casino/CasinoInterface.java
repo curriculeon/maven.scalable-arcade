@@ -1,6 +1,6 @@
-package com.github.curriculeon;
+package com.github.curriculeon.casino;
 
-import com.github.curriculeon.profile.ProfileManagerInterface;
+import com.github.curriculeon.casino.profile.ProfileManagerInterface;
 
 /**
  * Created by leon on 6/22/2020.

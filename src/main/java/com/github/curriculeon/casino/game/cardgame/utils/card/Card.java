@@ -1,4 +1,4 @@
-package com.github.curriculeon.cardutilities;
+package com.github.curriculeon.casino.game.cardgame.utils.card;
 
 /**
  * Created by leon.hunter on 2/1/2017.

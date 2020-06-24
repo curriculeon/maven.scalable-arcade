@@ -1,6 +1,6 @@
-package com.github.curriculeon.profile;
+package com.github.curriculeon.casino.profile;
 
-import com.github.curriculeon.AbstractDecisionMenu;
+import com.github.curriculeon.casino.utils.AbstractDecisionMenu;
 
 /**
  * Created by leon on 2/25/18.

@@ -1,4 +1,4 @@
-package com.github.curriculeon;
+package com.github.curriculeon.casino.utils;
 
 /**
  * Created by leon on 6/22/2020.

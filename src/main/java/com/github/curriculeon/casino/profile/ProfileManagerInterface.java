@@ -1,4 +1,4 @@
-package com.github.curriculeon.profile;
+package com.github.curriculeon.casino.profile;
 
 public interface ProfileManagerInterface {
     ProfileInterface createProfile();

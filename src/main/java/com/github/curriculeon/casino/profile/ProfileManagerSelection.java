@@ -1,7 +1,7 @@
-package com.github.curriculeon.profile;
+package com.github.curriculeon.casino.profile;
 
-import com.github.curriculeon.CasinoInterface;
-import com.github.curriculeon.DecisionInterface;
+import com.github.curriculeon.casino.CasinoInterface;
+import com.github.curriculeon.casino.utils.DecisionInterface;
 import com.github.curriculeon.utils.InputOutputConsole;
 
 import java.util.function.Consumer;

@@ -1,4 +1,7 @@
-package com.github.curriculeon;
+package com.github.curriculeon.casino.game.utils;
+
+
+import com.github.curriculeon.casino.game.PlayerInterface;
 
 /**
  * Created by leon on 2/25/18.

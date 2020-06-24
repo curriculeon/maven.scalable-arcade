@@ -15,16 +15,12 @@ public class MockInputOutputConsole extends InputOutputConsole {
     /**
      * Used to inject buffered-string into a console for testing purposes
      */
-    public InputOutputConsole append(String val, Object... args) {
+    public MockInputOutputConsole append(String val, Object... args) {
         StringBuilder bufferedText = new StringBuilder();
-        do {
-            bufferedText.append(getScanner().nextLine());
-        } while(getScanner().hasNext());
-        String inputString = bufferedText.toString();
-        byte[] inputBytes = inputString.getBytes();
-        ByteArrayInputStream inputByteArray = new ByteArrayInputStream(inputBytes);
-        Scanner scanner = new Scanner(inputByteArray);
-        super.setScanner(scanner);
-        return new InputOutputConsole(getScanner(), getPrintStream());
+        getScanner().forEachRemaining(bufferedText::append);
+        return new MockInputOutputConsole(new Scanner(new ByteArrayInputStream(bufferedText
+                .append(String.format(val, args))
+                .toString() 
+                .getBytes())), getPrintStream());
     }
 }
