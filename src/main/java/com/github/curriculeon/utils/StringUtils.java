@@ -5,6 +5,7 @@ package com.github.curriculeon.utils;
  */
 public class StringUtils {
     public static String repeatString(String stringToBeRepeated, int numberOfTimesToRepeat) {
-        return new String(new char[numberOfTimesToRepeat]).replaceAll(String.valueOf(Character.MIN_VALUE), stringToBeRepeated);
+        return new String(new char[numberOfTimesToRepeat])
+                .replaceAll(String.valueOf(Character.MIN_VALUE), stringToBeRepeated);
     }
 }

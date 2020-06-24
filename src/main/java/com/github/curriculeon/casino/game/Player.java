@@ -7,12 +7,10 @@ import com.github.curriculeon.casino.profile.ProfileInterface;
  * Created by leon on 5/11/17.
  */
 public class Player implements PlayerInterface {
-    protected final ProfileInterface profile;
-    protected final String profileName;
+    private final ProfileInterface profile;
 
     public Player(ProfileInterface profile) {
         this.profile = profile;
-        this.profileName = profile.getName();
     }
 
     public ProfileInterface getProfile() {
@@ -20,6 +18,6 @@ public class Player implements PlayerInterface {
     }
 
     public String getName() {
-        return profileName;
+        return profile.getName();
     }
 }
