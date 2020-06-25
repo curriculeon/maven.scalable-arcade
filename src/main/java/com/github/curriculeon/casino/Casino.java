@@ -8,7 +8,7 @@ import com.github.curriculeon.casino.utils.AbstractDecisionMenu;
  * Created by leon on 6/25/2020.
  */
 public final class Casino extends AbstractDecisionMenu<CasinoDecision> implements CasinoInterface {
-    private ProfileManagerInterface profileManager = new ProfileManager();
+    private ProfileManagerInterface profileManager = ProfileManager.INSTANCE;
 
     public Casino() {
         super(CasinoDecision.values());

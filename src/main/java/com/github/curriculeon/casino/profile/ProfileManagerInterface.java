@@ -3,6 +3,7 @@ package com.github.curriculeon.casino.profile;
 import com.github.curriculeon.utils.InputOutputSocketInterface;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public interface ProfileManagerInterface extends InputOutputSocketInterface {
     List<ProfileInterface> getProfiles();
@@ -17,7 +18,7 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
         getConsole().println("Creating new player profile...");
         String name = getConsole().getStringInput("Enter player's name");
         double startingBalance = getConsole().getDoubleInput("Enter balance");
-        ProfileInterface newPlayer = new Profile(name, startingBalance, (long)getProfiles().size());
+        ProfileInterface newPlayer = new Profile(name, startingBalance, (long) getProfiles().size());
         return newPlayer;
     }
 
@@ -37,6 +38,7 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
 
     /**
      * Select profile from memory, create profile if none exists
+     *
      * @return selected profile
      */
 
@@ -69,7 +71,6 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
     }
 
 
-
     default void registerPlayer(ProfileInterface profile) {
         String name = profile.getName();
         getConsole().println("Checking database for user [ %s ].", name);
@@ -86,5 +87,17 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
 
     default boolean contains(ProfileInterface someDude) {
         return getProfiles().contains(someDude);
+    }
+
+    default ProfileInterface getProfileById(Long id) {
+        return getProfileWhere(profile -> profile.getProfileId().equals(id));
+    }
+
+    default ProfileInterface getProfileWhere(Predicate<ProfileInterface> profilePredicate) {
+        return getProfiles()
+                .stream()
+                .filter(profilePredicate)
+                .findFirst()
+                .get();
     }
 }

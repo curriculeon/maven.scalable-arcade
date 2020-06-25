@@ -3,7 +3,12 @@ package com.github.curriculeon.casino.game.cardgame.utils;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Rank;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Suit;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 10/27/17.
@@ -13,19 +18,17 @@ public class TestCardDeck {
 
     @Test
     public void testRank() {
-        for(Rank cardRank : Rank.values()) {
-            for(Card t : cardDeck) {
-                t.getRank().equals(cardRank);
-            }
-        }
+        List<Rank> allRanks = Arrays.asList(Rank.values());
+        List<Rank> deckRanks = new ArrayList<>();
+        cardDeck.forEach(card-> deckRanks.add(card.getRank()));
+        allRanks.forEach(rank -> Assert.assertTrue(deckRanks.contains(rank)));
     }
 
     @Test
     public void testSuit() {
-        for(Suit cardSuit : Suit.values()) {
-            for(Card t : cardDeck) {
-                t.getSuit().equals(cardSuit);
-            }
-        }
+        List<Suit> allSuits = Arrays.asList(Suit.values());
+        List<Suit> deckSuits = new ArrayList<>();
+        cardDeck.forEach(card-> deckSuits.add(card.getSuit()));
+        allSuits.forEach(rank -> Assert.assertTrue(deckSuits.contains(rank)));
     }
 }

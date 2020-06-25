@@ -3,6 +3,7 @@ package com.github.curriculeon.casino.game.cardgame;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.profile.ProfileInterface;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,6 +15,7 @@ public class AbstractCardGamePlayer implements CardGamePlayerInterface {
 
     public AbstractCardGamePlayer(ProfileInterface profile) {
         this.profile = profile;
+        this.hand = new ArrayList<>();
     }
 
     @Override

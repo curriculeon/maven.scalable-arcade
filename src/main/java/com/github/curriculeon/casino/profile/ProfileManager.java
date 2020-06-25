@@ -6,14 +6,16 @@ import java.util.List;
 /**
  * Created by leon.hunter on 2/1/2017.
  */
-public class ProfileManager implements ProfileManagerInterface {
-    public List<ProfileInterface> profiles;
+public enum ProfileManager implements ProfileManagerInterface {
+    INSTANCE;
 
-    public ProfileManager(List<ProfileInterface> profiles) {
+    private List<ProfileInterface> profiles;
+
+    ProfileManager(List<ProfileInterface> profiles) {
         this.profiles = profiles;
     }
 
-    public ProfileManager() {
+    ProfileManager() {
         this(new ArrayList<>());
     }
 

@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.game.utils;
 
 import com.github.curriculeon.casino.game.PlayerInterface;
+import com.github.curriculeon.casino.profile.ProfileManager;
 import com.github.curriculeon.utils.InputOutputSocketInterface;
 
 import java.util.List;

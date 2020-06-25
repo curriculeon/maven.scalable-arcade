@@ -17,7 +17,12 @@ public enum ProfileManagerSelection implements DecisionInterface {
     }),
 
     CREATE((casino) -> {
-        casino.getProfileManager().createProfile();
+        casino
+                .getProfileManager()
+                .registerPlayer(casino
+                        .getProfileManager()
+                        .createProfile());
+
     });
 
     private final Consumer<CasinoInterface> profileConsumer;
