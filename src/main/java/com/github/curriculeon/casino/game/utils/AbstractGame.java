@@ -22,23 +22,4 @@ abstract public class AbstractGame<PlayerType extends PlayerInterface> implement
     public List<PlayerType> getPlayers() {
         return players;
     }
-
-    @Override
-    public void addPlayer(PlayerType player) {
-        if (!contains(player)) {
-            players.add(player);
-        }
-    }
-
-
-    @Override
-    public void removePlayer(PlayerType player) {
-        players.add(player);
-    }
-
-
-    @Override
-    public Boolean contains(PlayerType player) {
-        return players.contains(player);
-    }
 }

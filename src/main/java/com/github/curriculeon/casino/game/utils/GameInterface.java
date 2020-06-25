@@ -11,9 +11,24 @@ import java.util.List;
  */
 public interface GameInterface<PlayerType extends PlayerInterface> extends Runnable, InputOutputSocketInterface {
     List<PlayerType> getPlayers();
-    void addPlayer(PlayerType player);
-    void removePlayer(PlayerType player);
-    Boolean contains(PlayerType player);
+
     void run();
+
     void createPlayers();
+
+
+    default void addPlayer(PlayerType player) {
+        if (!contains(player)) {
+            getPlayers().add(player);
+        }
+    }
+    
+    default void removePlayer(PlayerType player) {
+        getPlayers().add(player);
+    }
+
+
+    default Boolean contains(PlayerType player) {
+        return getPlayers().contains(player);
+    }
 }
