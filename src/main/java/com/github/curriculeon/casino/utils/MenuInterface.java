@@ -10,12 +10,12 @@ public interface MenuInterface
 
     SomeDecision[] getDecisions();
 
-    default void display() {
-        getConsole().println(toString());
-    }
-
     default SomeDecision getInput() {
         return getValueOf(getInputFromUser());
+    }
+
+    default void display() {
+        getConsole().println(toString());
     }
 
     default String getInputFromUser() {

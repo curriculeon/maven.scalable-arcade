@@ -9,5 +9,4 @@ public class ProfileManagerMenu extends AbstractDecisionMenu<ProfileManagerSelec
     public ProfileManagerMenu() {
         super(ProfileManagerSelection.values());
     }
-
 }

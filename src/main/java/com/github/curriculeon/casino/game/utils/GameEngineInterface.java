@@ -15,6 +15,12 @@ public interface GameEngineInterface<
     void evaluateTurn(GameTypePlayer player);
 
     default void run() {
+        getGame().createPlayers();
+        if(getGame().getPlayers().size() < 1) {
+            String errorMessage = "Invalid number of players specified for game of [ %s ]";
+            throw new IllegalArgumentException(String.format(errorMessage, getGame().getClass().getSimpleName()));
+        }
+
         getGame().run();
         for(GameTypePlayer player : getGame().getPlayers()) {
             evaluateTurn(player);

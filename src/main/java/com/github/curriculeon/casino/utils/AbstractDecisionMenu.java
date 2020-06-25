@@ -1,7 +1,6 @@
 package com.github.curriculeon.casino.utils;
 
 import com.github.curriculeon.utils.InputOutputConsole;
-import com.github.curriculeon.utils.StringUtils;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -12,7 +11,7 @@ import java.util.StringJoiner;
  */
 public abstract class AbstractDecisionMenu
         <SomeDecision extends Enum<SomeDecision> & DecisionInterface>
-        implements MenuInterface {
+        implements MenuInterface<SomeDecision> {
 
     private final SomeDecision[] decisions;
     private final InputOutputConsole console;

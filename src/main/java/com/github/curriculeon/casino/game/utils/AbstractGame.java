@@ -2,10 +2,10 @@ package com.github.curriculeon.casino.game.utils;
 
 
 import com.github.curriculeon.casino.game.PlayerInterface;
-import com.github.curriculeon.utils.InputOutputConsole;
-import com.github.curriculeon.utils.InputOutputConsoleInterface;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
@@ -15,17 +15,12 @@ abstract public class AbstractGame<PlayerType extends PlayerInterface> implement
     protected List<PlayerType> players;
 
     public AbstractGame(PlayerType... players) {
-        this.players = Arrays.asList(players);
+        this.players = new ArrayList<>(new LinkedHashSet<>(Arrays.asList(players)));
     }
 
     @Override
-    public InputOutputConsoleInterface getConsole() {
-        return new InputOutputConsole();
-    }
-
-    @Override
-    public PlayerType[] getPlayers() {
-        return (PlayerType[]) players.stream().toArray();
+    public List<PlayerType> getPlayers() {
+        return players;
     }
 
     @Override

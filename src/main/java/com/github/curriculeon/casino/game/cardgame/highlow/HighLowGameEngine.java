@@ -1,29 +1,26 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
 import com.github.curriculeon.casino.game.utils.AbstractGameEngine;
-import com.github.curriculeon.utils.InputOutputConsole;
-import com.github.curriculeon.utils.InputOutputConsoleInterface;
+import com.github.curriculeon.utils.InputOutputSocketInterface;
 
 /**
  * Created by leon on 6/24/2020.
  */
-public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLowGame> {
+public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLowGame> implements InputOutputSocketInterface {
     private HighLowPlayer highestScoringPlayer;
-    private InputOutputConsoleInterface console;
 
     public HighLowGameEngine() {
         this(new HighLowGame());
-        this.highestScoringPlayer = getGame().getPlayers()[0];
-        this.console = getGame().getConsole();
     }
 
     public HighLowGameEngine(HighLowGame game) {
         super(game);
     }
+
     @Override
     public void run() {
         super.run();
-        console.println(
+        getConsole().println(
                 "The winner is [ %s ], with a card value of [ %s ]",
                 highestScoringPlayer.getName(), highestScoringPlayer.getCard().getValue());
     }

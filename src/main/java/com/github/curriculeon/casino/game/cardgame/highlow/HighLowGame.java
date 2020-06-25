@@ -8,6 +8,10 @@ import com.github.curriculeon.casino.game.utils.AbstractGame;
 public class HighLowGame extends AbstractGame<HighLowPlayer> {
     @Override
     public void run() {
+    }
+
+    @Override
+    public void createPlayers() {
 
     }
 }
