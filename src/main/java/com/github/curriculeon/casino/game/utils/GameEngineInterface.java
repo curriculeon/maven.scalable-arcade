@@ -11,6 +11,13 @@ public interface GameEngineInterface<
         extends Runnable {
 
     GameType getGame();
+
     void evaluateTurn(GameTypePlayer player);
-    void run();
+
+    default void run() {
+        getGame().run();
+        for(GameTypePlayer player : getGame().getPlayers()) {
+            evaluateTurn(player);
+        }
+    }
 }

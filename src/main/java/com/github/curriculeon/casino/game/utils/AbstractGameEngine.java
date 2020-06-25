@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.game.utils;
 
 import com.github.curriculeon.casino.game.PlayerInterface;
+import com.github.curriculeon.utils.InputOutputConsole;
 
 /**
  * Created by leon on 2/25/18.
@@ -17,15 +18,7 @@ public abstract class AbstractGameEngine<
     }
 
     @Override
-    public void run() {
-        for(GameTypePlayer player : getGame().getPlayers()) {
-            evaluateTurn(player);
-        }
-    }
-
-    @Override
     public GameType getGame() {
         return game;
     }
-
 }

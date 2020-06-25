@@ -1,8 +1,10 @@
 package com.github.curriculeon.casino.game.utils;
 
 
-import com.github.curriculeon.casino.game.Player;
+import com.github.curriculeon.casino.game.PlayerInterface;
 import com.github.curriculeon.casino.utils.DecisionInterface;
+
+import java.util.function.BiConsumer;
 
 /**
  * Created by leon on 2/25/18.
@@ -10,6 +12,11 @@ import com.github.curriculeon.casino.utils.DecisionInterface;
  */
 public interface GameDecisionInterface<
         GameType extends GameInterface,
-        PlayerType extends Player> extends DecisionInterface {
-    void perform(GameType game, PlayerType player);
+        PlayerType extends PlayerInterface> extends DecisionInterface {
+
+    BiConsumer<GameType, PlayerType> getProcedure();
+
+    default void perform(GameType game, PlayerType player) {
+        getProcedure().accept(game, player);
+    }
 }
