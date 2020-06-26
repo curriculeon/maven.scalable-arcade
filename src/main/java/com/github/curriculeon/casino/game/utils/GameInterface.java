@@ -1,7 +1,6 @@
 package com.github.curriculeon.casino.game.utils;
 
 import com.github.curriculeon.casino.game.PlayerInterface;
-import com.github.curriculeon.casino.profile.ProfileManager;
 import com.github.curriculeon.utils.InputOutputSocketInterface;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public interface GameInterface<PlayerType extends PlayerInterface> extends Runna
             getPlayers().add(player);
         }
     }
-    
+
     default void removePlayer(PlayerType player) {
         getPlayers().add(player);
     }

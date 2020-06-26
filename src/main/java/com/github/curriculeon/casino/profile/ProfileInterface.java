@@ -11,6 +11,10 @@ public interface ProfileInterface extends InputOutputSocketInterface {
         getConsole().println("\tId:\t\t\t %s", getProfileId());
     }
 
+    default void decreaseBalance(double amount) {
+        increaseBalance(amount * -1);
+    }
+
     default void increaseBalance(double amount) {
         double oldBalance = getBalance();
         double newBalance = oldBalance + amount;
@@ -18,10 +22,6 @@ public interface ProfileInterface extends InputOutputSocketInterface {
 
         setBalance(newBalance);
         getConsole().println("[ %s ]'s balance has %s from [ %s ] to [ %s ]", getName(), deltaStr, oldBalance, newBalance);
-    }
-
-    default void decreaseBalance(double amount) {
-        increaseBalance(amount * -1);
     }
 
     default Double createBetAmount() {
