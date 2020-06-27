@@ -26,7 +26,6 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
 
     }),
 
-
     DECIDE_BLUFF((game, player) -> {
         String infoMessage = "[ %s ] believes the previous player's hand was not [ %s ]";
         Card previousCard = game
