@@ -8,7 +8,7 @@ public interface ProfileInterface extends InputOutputSocketInterface {
         getConsole().println("Printing profile details");
         getConsole().println("\tName:\t\t %s", getName());
         getConsole().println("\tBalance:\t %s", getBalance());
-        getConsole().println("\tId:\t\t\t %s", getProfileId());
+        getConsole().println("\tId:\t\t\t %s", getId());
     }
 
     default void decreaseBalance(double amount) {
@@ -43,5 +43,5 @@ public interface ProfileInterface extends InputOutputSocketInterface {
 
     String getName();
 
-    Long getProfileId();
+    Long getId();
 }

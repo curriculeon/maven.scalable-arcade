@@ -27,15 +27,19 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
 
     @Override
     public void evaluateTurn(HighLowPlayer currentPlayer) {
-        Integer highestScoringPlayerCardValue = highestScoringPlayer
-                .getCard()
-                .getValue();
-        Integer currentPlayerCardValue = currentPlayer
-                .getCard()
-                .getValue();
+        if(highestScoringPlayer != null) {
+            Integer highestScoringPlayerCardValue = highestScoringPlayer
+                    .getCard()
+                    .getValue();
 
-        if (highestScoringPlayerCardValue < currentPlayerCardValue) {
-            highestScoringPlayer = currentPlayer;
+            Integer currentPlayerCardValue = currentPlayer
+                    .getCard()
+                    .getValue();
+
+            if (highestScoringPlayerCardValue < currentPlayerCardValue) {
+                highestScoringPlayer = currentPlayer;
+            }
         }
+        this.highestScoringPlayer = currentPlayer;
     }
 }

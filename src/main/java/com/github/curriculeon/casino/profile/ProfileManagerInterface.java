@@ -47,7 +47,7 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
             printProfilesInformation();
             long playerId = getConsole().getLongInput("Please enter the desired player-profile's id number: ");
             for (ProfileInterface player : getProfiles()) {
-                if (player.getProfileId() == playerId) {
+                if (player.getId() == playerId) {
                     return player;
                 }
             }
@@ -73,13 +73,15 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
 
     default void registerPlayer(ProfileInterface profile) {
         String name = profile.getName();
+        long profileId = profile.getId();
         getConsole().println("Checking database for user [ %s ].", name);
         if (getProfiles().contains(profile)) {
-            getConsole().println("Oh, %s! I didn't realize it was you! Welcome back!", name);
+            getConsole().println("Welcome back, %s!", name);
             profile.printInformation();
         } else {
             getConsole().println("The Casino has registered a new profile!");
             getConsole().println("Profile-name is " + name);
+            getConsole().println("Profile-id is " + profileId);
             getProfiles().add(profile);
         }
     }
@@ -90,7 +92,7 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
     }
 
     default ProfileInterface getProfileById(Long id) {
-        return getProfileWhere(profile -> profile.getProfileId().equals(id));
+        return getProfileWhere(profile -> profile.getId().equals(id));
     }
 
     default ProfileInterface getProfileWhere(Predicate<ProfileInterface> profilePredicate) {

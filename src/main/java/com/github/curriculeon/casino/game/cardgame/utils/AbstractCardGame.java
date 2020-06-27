@@ -12,21 +12,21 @@ abstract public class AbstractCardGame<
         CardGamePlayerType extends CardGamePlayerInterface>
         implements CardGameInterface<CardGamePlayerType> {
 
-    private DiscardPile discardPile;
+    private DiscardPile<CardGamePlayerType> discardPile;
     private List<CardGamePlayerType> players;
 
 
-    public AbstractCardGame(DiscardPile discardPile, List<CardGamePlayerType> players) {
+    public AbstractCardGame(DiscardPile<CardGamePlayerType> discardPile, List<CardGamePlayerType> players) {
         this.discardPile = discardPile;
         this.players = players;
     }
 
     public AbstractCardGame() {
-        this(new DiscardPile(), new ArrayList<>());
+        this(new DiscardPile<>(), new ArrayList<>());
     }
 
     @Override
-    public DiscardPile getDiscardPile() {
+    public DiscardPile<CardGamePlayerType> getDiscardPile() {
         return discardPile;
     }
 

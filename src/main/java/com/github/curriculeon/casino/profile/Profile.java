@@ -28,7 +28,7 @@ public class Profile implements ProfileInterface {
     }
 
     @Override
-    public Long getProfileId() {
+    public Long getId() {
         return this.profileId;
     }
 

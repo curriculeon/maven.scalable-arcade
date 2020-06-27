@@ -17,9 +17,9 @@ public interface GameInterface<PlayerType extends PlayerInterface> extends Runna
 
 
     default void addPlayer(PlayerType player) {
-        if (!contains(player)) {
-            getPlayers().add(player);
-        }
+        getConsole().println("Adding player [ %s ] to game", player.getName());
+        getPlayers().add(player);
+        getConsole().println("Player [ %s ] has been added to the game", player.getName());
     }
 
     default void removePlayer(PlayerType player) {
