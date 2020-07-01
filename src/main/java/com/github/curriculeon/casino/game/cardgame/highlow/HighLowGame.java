@@ -32,4 +32,5 @@ public class HighLowGame extends AbstractCardGame<HighLowPlayer> {
     public Card getCurrentFaceUpValue() {
         return getDiscardPile().getAllCards().get(0);
     }
+
 }

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by leon on 6/25/2020.
  */
-public class AbstractCardGamePlayer implements CardGamePlayerInterface {
+abstract public class AbstractCardGamePlayer implements CardGamePlayerInterface {
     private ProfileInterface profile;
     private List<Card> hand;
 

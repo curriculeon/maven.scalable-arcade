@@ -7,4 +7,6 @@ public interface CardGameInterface<
         CardGamePlayerType extends CardGamePlayerInterface>
         extends GameInterface<CardGamePlayerType> {
     DiscardPile getDiscardPile();
+
+    Deck getDeck();
 }

@@ -19,6 +19,8 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
 
     @Override
     public void run() {
+//        getGame().addPlayer();
+//        getGame().getDiscardPile().add(getGame().getDeck().pop());
         super.run();
         getConsole().println(
                 "The winner is [ %s ], with a card value of [ %s ]",
@@ -27,6 +29,10 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
 
     @Override
     public void evaluateTurn(HighLowPlayer currentPlayer) {
+        HighLowGameDecisionMenu highLowGameDecision = new HighLowGameDecisionMenu();
+        HighLowGameDecision decision = highLowGameDecision.getInput();
+        decision.perform(getGame(), currentPlayer);
+
         if(highestScoringPlayer != null) {
             Integer highestScoringPlayerCardValue = highestScoringPlayer
                     .getCard()

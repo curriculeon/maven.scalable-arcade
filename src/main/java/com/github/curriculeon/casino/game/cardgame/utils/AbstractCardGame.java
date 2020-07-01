@@ -14,15 +14,17 @@ abstract public class AbstractCardGame<
 
     private DiscardPile<CardGamePlayerType> discardPile;
     private List<CardGamePlayerType> players;
+    private Deck deck;
 
 
-    public AbstractCardGame(DiscardPile<CardGamePlayerType> discardPile, List<CardGamePlayerType> players) {
+    public AbstractCardGame(List<CardGamePlayerType> players, DiscardPile<CardGamePlayerType> discardPile, Deck deck) {
+        this.deck = deck;
         this.discardPile = discardPile;
         this.players = players;
     }
 
     public AbstractCardGame() {
-        this(new DiscardPile<>(), new ArrayList<>());
+        this(new ArrayList<>(), new DiscardPile<>(), new Deck());
     }
 
     @Override
@@ -33,5 +35,10 @@ abstract public class AbstractCardGame<
     @Override
     public List<CardGamePlayerType> getPlayers() {
         return players;
+    }
+
+    @Override
+    public Deck getDeck() {
+        return deck;
     }
 }
