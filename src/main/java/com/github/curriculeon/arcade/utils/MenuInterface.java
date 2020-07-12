@@ -1,6 +1,6 @@
 package com.github.curriculeon.arcade.utils;
 
-import com.github.curriculeon.utils.InputOutputConsoleInterface;
+import com.github.curriculeon.utils.InputOutputSocketInterface;
 import com.github.curriculeon.utils.StringUtils;
 
 /**
@@ -8,9 +8,7 @@ import com.github.curriculeon.utils.StringUtils;
  * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public interface MenuInterface
-        <SomeDecision extends Enum<SomeDecision> & DecisionInterface> {
-
-    InputOutputConsoleInterface getConsole();
+        <SomeDecision extends Enum<SomeDecision> & DecisionInterface> extends InputOutputSocketInterface {
 
     SomeDecision[] getDecisions();
 

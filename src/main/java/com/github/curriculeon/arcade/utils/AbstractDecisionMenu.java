@@ -1,9 +1,6 @@
 package com.github.curriculeon.arcade.utils;
 
-import com.github.curriculeon.utils.InputOutputConsole;
-
 import java.util.Arrays;
-import java.util.Scanner;
 import java.util.StringJoiner;
 
 /**
@@ -15,21 +12,14 @@ public abstract class AbstractDecisionMenu
         implements MenuInterface<SomeDecision> {
 
     private final SomeDecision[] decisions;
-    private final InputOutputConsole console;
 
     public AbstractDecisionMenu(SomeDecision[] decisions) {
         this.decisions = decisions;
-        this.console = new InputOutputConsole(new Scanner(System.in), System.out);
     }
 
     @Override
     public SomeDecision[] getDecisions() {
         return decisions;
-    }
-
-    @Override
-    public InputOutputConsole getConsole() {
-        return console;
     }
 
     @Override
