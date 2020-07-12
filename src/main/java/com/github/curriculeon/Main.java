@@ -1,7 +1,7 @@
 package com.github.curriculeon;
 
-import com.github.curriculeon.casino.Casino;
-import com.github.curriculeon.casino.CasinoInterface;
+import com.github.curriculeon.arcade.Arcade;
+import com.github.curriculeon.arcade.ArcadeInterface;
 
 /**
  * Created by leon on 1/29/2017.
@@ -9,7 +9,7 @@ import com.github.curriculeon.casino.CasinoInterface;
  */
 public class Main {
     public static void main(String[] args) {
-        CasinoInterface casino = new Casino();
+        ArcadeInterface casino = new Arcade();
         casino.run();
     }
 }
