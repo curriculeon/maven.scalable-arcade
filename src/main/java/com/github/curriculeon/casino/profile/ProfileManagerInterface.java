@@ -5,6 +5,10 @@ import com.github.curriculeon.utils.InputOutputSocketInterface;
 import java.util.List;
 import java.util.function.Predicate;
 
+/**
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
 public interface ProfileManagerInterface extends InputOutputSocketInterface {
     List<ProfileInterface> getProfiles();
 

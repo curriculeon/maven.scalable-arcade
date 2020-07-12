@@ -7,7 +7,8 @@ import java.util.Scanner;
 import java.util.StringJoiner;
 
 /**
- * Created by leon on 2/25/18.
+ * Created by leon on 2/25/2018.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public abstract class AbstractDecisionMenu
         <SomeDecision extends Enum<SomeDecision> & DecisionInterface>

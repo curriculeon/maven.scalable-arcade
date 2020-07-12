@@ -7,7 +7,8 @@ import com.github.curriculeon.utils.InputOutputConsole;
 import java.util.function.Consumer;
 
 /**
- * Created by leon on 2/25/18.
+ * Created by leon on 2/25/2018.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public enum ProfileManagerSelection implements DecisionInterface {
     SELECT((casino) -> {

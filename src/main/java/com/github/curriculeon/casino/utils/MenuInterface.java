@@ -3,6 +3,10 @@ package com.github.curriculeon.casino.utils;
 import com.github.curriculeon.utils.InputOutputConsoleInterface;
 import com.github.curriculeon.utils.StringUtils;
 
+/**
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
 public interface MenuInterface
         <SomeDecision extends Enum<SomeDecision> & DecisionInterface> {
 

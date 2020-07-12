@@ -2,6 +2,10 @@ package com.github.curriculeon.casino.profile;
 
 import com.github.curriculeon.utils.InputOutputSocketInterface;
 
+/**
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
 public interface ProfileInterface extends InputOutputSocketInterface {
 
     default void printInformation() {

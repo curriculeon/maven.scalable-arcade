@@ -4,7 +4,8 @@ package com.github.curriculeon.casino.game;
 import com.github.curriculeon.casino.profile.ProfileInterface;
 
 /**
- * Created by leon on 5/11/17.
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public class Player implements PlayerInterface {
     private final ProfileInterface profile;

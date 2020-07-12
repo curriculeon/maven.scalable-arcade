@@ -5,6 +5,7 @@ import com.github.curriculeon.utils.InputOutputConsole;
 
 /**
  * Created by leon on 2/25/18.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public abstract class AbstractGameEngine<
         GameTypePlayer extends PlayerInterface,

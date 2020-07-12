@@ -1,13 +1,10 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
-import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.game.utils.GameDecisionInterface;
-import com.github.curriculeon.utils.InputOutputConsole;
 import com.github.curriculeon.utils.InputOutputConsoleInterface;
 
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 /**
  * Created by leon on 6/24/2020.

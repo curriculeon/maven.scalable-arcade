@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 abstract public class AbstractGame<PlayerType extends PlayerInterface> implements GameInterface<PlayerType> {
     protected List<PlayerType> players;

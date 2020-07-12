@@ -1,5 +1,9 @@
 package com.github.curriculeon.casino.profile;
 
+/**
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
 public class Profile implements ProfileInterface {
     private final Long profileId;
     private final String name;
@@ -14,7 +18,7 @@ public class Profile implements ProfileInterface {
 
     @Override
     public void setBalance(Double newBalance) {
-        this.balance = balance;
+        this.balance = newBalance;
     }
 
     @Override
@@ -30,9 +34,5 @@ public class Profile implements ProfileInterface {
     @Override
     public Long getId() {
         return this.profileId;
-    }
-
-    private void setBalance(double balance) {
-        this.balance = balance;
     }
 }

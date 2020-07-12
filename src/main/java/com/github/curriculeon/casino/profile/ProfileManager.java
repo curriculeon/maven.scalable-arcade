@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by leon.hunter on 2/1/2017.
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public enum ProfileManager implements ProfileManagerInterface {
     INSTANCE;

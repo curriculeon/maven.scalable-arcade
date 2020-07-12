@@ -3,6 +3,10 @@ package com.github.curriculeon.utils;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ * Created by leon on 6/25/2020.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
 public interface InputOutputConsoleInterface {
     void setScanner(Scanner scanner);
 

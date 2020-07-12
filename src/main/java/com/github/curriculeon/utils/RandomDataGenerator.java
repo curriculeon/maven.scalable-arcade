@@ -5,7 +5,6 @@ import java.util.*;
 /**
  * Created by Leon on 2/4/2017.
  */
-
 public final class RandomDataGenerator {
     private final Random random = new Random();
 

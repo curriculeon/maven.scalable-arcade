@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 public interface GameInterface<PlayerType extends PlayerInterface> extends Runnable, InputOutputSocketInterface {
     List<PlayerType> getPlayers();
