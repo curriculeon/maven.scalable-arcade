@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.profile;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,6 +14,9 @@ public enum ProfileManager implements ProfileManagerInterface {
 
     ProfileManager(List<ProfileInterface> profiles) {
         this.profiles = profiles;
+        profiles.addAll(Arrays.asList(
+                new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 0L),
+                new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 1L)));
     }
 
     ProfileManager() {

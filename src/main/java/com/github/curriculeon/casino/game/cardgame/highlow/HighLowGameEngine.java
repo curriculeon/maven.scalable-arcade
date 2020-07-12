@@ -1,13 +1,16 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
+import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.game.utils.AbstractGameEngine;
+import com.github.curriculeon.casino.profile.Profile;
 import com.github.curriculeon.utils.InputOutputSocketInterface;
+import com.github.curriculeon.utils.Pair;
 
 /**
  * Created by leon on 6/24/2020.
  */
 public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLowGame> implements InputOutputSocketInterface {
-    private HighLowPlayer highestScoringPlayer;
+    private Pair<HighLowPlayer, Card> highestScoringPlayerAndCard;
 
     public HighLowGameEngine() {
         this(new HighLowGame());
@@ -19,33 +22,44 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
 
     @Override
     public void run() {
-//        getGame().addPlayer();
-//        getGame().getDiscardPile().add(getGame().getDeck().pop());
-        super.run();
-        getConsole().println(
-                "The winner is [ %s ], with a card value of [ %s ]",
-                highestScoringPlayer.getName(), highestScoringPlayer.getCard().getValue());
+        HighLowPlayer dealer = new HighLowPlayer(new Profile("DEALER", Double.MAX_VALUE, null));
+
+        do {
+            getGame().getDiscardPile().add(dealer, getGame().getDeck().pop());
+            super.run();
+            getConsole().println(
+                    "The winner is [ %s ], with a card value of [ %s ]",
+                    highestScoringPlayerAndCard.getKey().getName(), highestScoringPlayerAndCard.getValue().getValue());
+        } while (!getGame().getDeck().isEmpty());
     }
 
     @Override
     public void evaluateTurn(HighLowPlayer currentPlayer) {
         HighLowGameDecisionMenu highLowGameDecision = new HighLowGameDecisionMenu();
-        HighLowGameDecision decision = highLowGameDecision.getInput();
-        decision.perform(getGame(), currentPlayer);
+        Boolean playerTurnIsOver;
+        do {
+            HighLowGameDecision decision = highLowGameDecision.getInput();
+            decision.perform(getGame(), currentPlayer);
 
-        if(highestScoringPlayer != null) {
-            Integer highestScoringPlayerCardValue = highestScoringPlayer
-                    .getCard()
-                    .getValue();
+            if (highestScoringPlayerAndCard != null) {
+                Integer highestScoringPlayerCardValue = highestScoringPlayerAndCard
+                        .getValue()
+                        .getValue();
 
-            Integer currentPlayerCardValue = currentPlayer
-                    .getCard()
-                    .getValue();
+                Integer currentPlayerCardValue = getGame()
+                        .getCurrentFaceUpValue()
+                        .getValue();
 
-            if (highestScoringPlayerCardValue < currentPlayerCardValue) {
-                highestScoringPlayer = currentPlayer;
+                if (highestScoringPlayerCardValue < currentPlayerCardValue) {
+                    highestScoringPlayerAndCard = new Pair<>(currentPlayer, getGame().getCurrentFaceUpValue());
+                }
+            } else {
+                this.highestScoringPlayerAndCard = new Pair<>(currentPlayer, getGame().getCurrentFaceUpValue());
             }
-        }
-        this.highestScoringPlayer = currentPlayer;
+
+            playerTurnIsOver = HighLowPlayer.DecisionState.HIGH.equals(currentPlayer.getDecision()) ||
+                    HighLowPlayer.DecisionState.LOW.equals(currentPlayer.getDecision()) ||
+                    HighLowPlayer.DecisionState.BLUFF.equals(currentPlayer.getDecision());
+        } while (!playerTurnIsOver);
     }
 }

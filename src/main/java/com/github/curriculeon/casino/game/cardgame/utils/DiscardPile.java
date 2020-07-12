@@ -1,10 +1,11 @@
 package com.github.curriculeon.casino.game.cardgame.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.curriculeon.casino.game.cardgame.CardGamePlayerInterface;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.utils.Pair;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 import java.util.stream.Collectors;
@@ -39,11 +40,16 @@ public class DiscardPile<CardGamePlayerType extends CardGamePlayerInterface> {
                 .collect(Collectors.toList());
     }
 
-    public Card getTopCard() {
-        return cardMap.pop().getValue();
+    public Pair<CardGamePlayerType, Card> getOwnerAndCardAtIndex(int index) {
+        return cardMap.get(index);
     }
 
-    public CardGamePlayerType getOwnerOfTopCard() {
-        return cardMap.pop().getKey();
+    @Override
+    public String toString() {
+        try {
+            return new ObjectMapper().writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

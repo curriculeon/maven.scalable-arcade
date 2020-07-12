@@ -3,14 +3,17 @@ package com.github.curriculeon.casino.game.cardgame.highlow;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.game.utils.GameDecisionInterface;
 import com.github.curriculeon.utils.InputOutputConsole;
+import com.github.curriculeon.utils.InputOutputConsoleInterface;
 
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 /**
  * Created by leon on 6/24/2020.
  */
 public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, HighLowPlayer> {
     DECIDE_HIGH((game, player) -> {
+        player.setDecision(HighLowPlayer.DecisionState.HIGH);
         String infoMessage = "[ %s ] has claimed their hand-value is `HIGHER` than the current face-up value of [ %s ]";
         Card currentFaceUpCard = game.getCurrentFaceUpValue();
         game
@@ -23,32 +26,75 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
 
 
     DECIDE_LOW((game, player) -> {
-
-    }),
-
-    DECIDE_BLUFF((game, player) -> {
-        String infoMessage = "[ %s ] believes the previous player's hand was not [ %s ]";
-        Card previousCard = game
-                .getDiscardPile()
-                .getTopCard();
-
-        HighLowPlayer previousPlayer = game
-                .getDiscardPile()
-                .getOwnerOfTopCard();
-
+        player.setDecision(HighLowPlayer.DecisionState.LOW);
+        String infoMessage = "[ %s ] has claimed their hand-value is `LOWER` than the current face-up value of [ %s ]";
+        Card currentFaceUpCard = game.getCurrentFaceUpValue();
         game
                 .getConsole()
-                .println(infoMessage, player.getName(), previousCard);
+                .println(infoMessage, player.getName(), currentFaceUpCard);
         game
                 .getDiscardPile()
                 .add(player, player.getCard());
     }),
 
-    VIEW_DISCARD_PILE((game, player)-> {
+    DECIDE_BLUFF((game, player) -> {
+        player.setDecision(HighLowPlayer.DecisionState.BLUFF);
+        InputOutputConsoleInterface console = game.getConsole();
+        String claimMessage = "[ %s ] believes the previous player, [ %s ], did not have a hand-state of [ %s ]";
+        String previousCardInfoMessage = "Previous-card was [ %s ]";
+        String previousPreviousCardInfoMessage = "Previous-previous-card was [ %s ]";
+        String claimAffirmationMessage = "[ %s ]'s claim that [ %s ] did not have a hand-state of [ %s ] was [ %s ]";
 
+        HighLowPlayer previousPlayer = game
+                .getDiscardPile()
+                .getOwnerAndCardAtIndex(0)
+                .getKey();
+
+        Card previousCard = game
+                .getDiscardPile()
+                .getOwnerAndCardAtIndex(0)
+                .getValue();
+
+        Card previousPreviousCard = game
+                .getDiscardPile()
+                .getOwnerAndCardAtIndex(1)
+                .getValue();
+
+        Boolean previousPlayerDecidedHigh = previousPlayer
+                .getDecision()
+                .equals(HighLowPlayer.DecisionState.HIGH);
+        Boolean previousPlayerDecidedLow = previousPlayer.getDecision().equals(HighLowPlayer.DecisionState.LOW);
+        Boolean previousPlayerHasHigh = previousPreviousCard.getValue() < previousCard.getValue();
+        Boolean previousPlayerHasLow = previousPreviousCard.getValue() > previousCard.getValue();
+
+        Boolean previousPlayerClaimIsTrue = (
+                previousPlayerDecidedHigh && previousPlayerHasHigh) || (
+                previousPlayerDecidedLow && previousPlayerHasLow);
+
+        console.println(claimMessage,
+                previousPlayer.getName(),
+                player.getName(),
+                previousPlayer.getDecision().name());
+
+        console.println(previousCardInfoMessage, previousCard);
+        console.println(previousPreviousCardInfoMessage, previousPreviousCard);
+        console.print(claimAffirmationMessage, player.getName(), previousPlayer.getName(), previousPlayer.getDecision(), previousPlayerClaimIsTrue);
+
+        if (previousPlayerClaimIsTrue) {
+            previousPlayer.increasePoints(1);
+            player.increasePoints(-1);
+        }
     }),
 
-    VIEW_HAND((game, player)-> {
+    VIEW_DISCARD_PILE((game, player) -> {
+        game.getConsole().println(game
+                        .getDiscardPile()
+                        .getOwnerAndCardAtIndex(0)
+                        .getValue()
+                        .toString());
+    }),
+
+    VIEW_HAND((game, player) -> {
         game
                 .getConsole()
                 .println(player.getHand().toString());

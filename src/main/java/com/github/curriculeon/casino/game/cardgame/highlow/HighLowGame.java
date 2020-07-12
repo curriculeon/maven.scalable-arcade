@@ -30,7 +30,7 @@ public class HighLowGame extends AbstractCardGame<HighLowPlayer> {
     }
 
     public Card getCurrentFaceUpValue() {
-        return getDiscardPile().getAllCards().get(0);
+        return getDiscardPile().getOwnerAndCardAtIndex(0).getValue();
     }
 
 }
