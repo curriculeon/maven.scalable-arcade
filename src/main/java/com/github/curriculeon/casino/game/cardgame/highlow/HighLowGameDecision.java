@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.game.utils.GameDecisionInterface;
 import com.github.curriculeon.utils.InputOutputConsole;
 import com.github.curriculeon.utils.InputOutputConsoleInterface;
@@ -12,10 +13,22 @@ import java.util.function.Consumer;
  * Created by leon on 6/24/2020.
  */
 public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, HighLowPlayer> {
+    VIEW_HAND((game, player) -> {
+        game.getConsole().println(player.getHand().toString());
+    }),
+
+    VIEW_DISCARD_PILE((game, player) -> {
+        game.getConsole().println(game
+                .getDiscardPile()
+                .getOwnerAndCardAtIndex(0)
+                .getValue()
+                .toString());
+    }),
+
     DECIDE_HIGH((game, player) -> {
         player.setDecision(HighLowPlayer.DecisionState.HIGH);
         String infoMessage = "[ %s ] has claimed their hand-value is `HIGHER` than the current face-up value of [ %s ]";
-        Card currentFaceUpCard = game.getCurrentFaceUpValue();
+        CardInterface currentFaceUpCard = game.getCurrentFaceUpValue();
         game
                 .getConsole()
                 .println(infoMessage, player.getName(), currentFaceUpCard);
@@ -28,7 +41,7 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
     DECIDE_LOW((game, player) -> {
         player.setDecision(HighLowPlayer.DecisionState.LOW);
         String infoMessage = "[ %s ] has claimed their hand-value is `LOWER` than the current face-up value of [ %s ]";
-        Card currentFaceUpCard = game.getCurrentFaceUpValue();
+        CardInterface currentFaceUpCard = game.getCurrentFaceUpValue();
         game
                 .getConsole()
                 .println(infoMessage, player.getName(), currentFaceUpCard);
@@ -50,12 +63,12 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
                 .getOwnerAndCardAtIndex(0)
                 .getKey();
 
-        Card previousCard = game
+        CardInterface previousCard = game
                 .getDiscardPile()
                 .getOwnerAndCardAtIndex(0)
                 .getValue();
 
-        Card previousPreviousCard = game
+        CardInterface previousPreviousCard = game
                 .getDiscardPile()
                 .getOwnerAndCardAtIndex(1)
                 .getValue();
@@ -84,20 +97,6 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
             previousPlayer.increasePoints(1);
             player.increasePoints(-1);
         }
-    }),
-
-    VIEW_DISCARD_PILE((game, player) -> {
-        game.getConsole().println(game
-                        .getDiscardPile()
-                        .getOwnerAndCardAtIndex(0)
-                        .getValue()
-                        .toString());
-    }),
-
-    VIEW_HAND((game, player) -> {
-        game
-                .getConsole()
-                .println(player.getHand().toString());
     });
 
     private final BiConsumer<HighLowGame, HighLowPlayer> operation;

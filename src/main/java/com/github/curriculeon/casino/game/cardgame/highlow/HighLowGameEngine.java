@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.game.utils.AbstractGameEngine;
 import com.github.curriculeon.casino.profile.Profile;
 import com.github.curriculeon.utils.InputOutputSocketInterface;
@@ -10,7 +11,7 @@ import com.github.curriculeon.utils.Pair;
  * Created by leon on 6/24/2020.
  */
 public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLowGame> implements InputOutputSocketInterface {
-    private Pair<HighLowPlayer, Card> highestScoringPlayerAndCard;
+    private Pair<HighLowPlayer, CardInterface> highestScoringPlayerAndCard;
 
     public HighLowGameEngine() {
         this(new HighLowGame());

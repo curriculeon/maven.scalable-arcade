@@ -2,8 +2,9 @@ package com.github.curriculeon.casino.game.cardgame.utils.card;
 
 /**
  * Created by leon.hunter on 2/1/2017.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
-public enum Suit {
+public enum Suit implements SuitInterface {
     HEARTS("♥"),
     DIAMONDS("♦"),
     CLUBS("♣"),
@@ -17,9 +18,5 @@ public enum Suit {
 
     public String getCardGraphic() {
         return cardGraphic;
-    }
-
-    public static int length() {
-        return values().length;
     }
 }

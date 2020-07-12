@@ -11,7 +11,6 @@ public class HighLowPlayer extends AbstractCardGamePlayer {
     enum DecisionState {
         HIGH,LOW,BLUFF;
     }
-    private ProfileInterface profile;
     private DecisionState decision;
     private int numberOfPoints;
 

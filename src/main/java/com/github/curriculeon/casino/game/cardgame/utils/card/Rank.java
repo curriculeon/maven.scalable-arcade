@@ -1,6 +1,9 @@
 package com.github.curriculeon.casino.game.cardgame.utils.card;
 
-public enum Rank {
+/**
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
+ */
+public enum Rank implements RankInterface {
     LOW_ACE(1),
     TWO(2),
     THREE(3),

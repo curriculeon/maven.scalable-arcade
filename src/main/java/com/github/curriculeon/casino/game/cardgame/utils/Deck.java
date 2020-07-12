@@ -1,6 +1,7 @@
 package com.github.curriculeon.casino.game.cardgame.utils;
 
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Rank;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Suit;
 
@@ -13,7 +14,7 @@ import java.util.Stack;
  */
 
 public class Deck implements Iterable<Card> {
-    private Stack<Card> cardStack = new Stack<>();
+    private Stack<CardInterface> cardStack = new Stack<>();
 
     public Deck() {
         for (Suit suit : Suit.values()) {
@@ -24,15 +25,15 @@ public class Deck implements Iterable<Card> {
         }
     }
 
-    public Card pop() {
+    public CardInterface pop() {
         return cardStack.pop();
     }
 
-    public Card push(Card card) {
+    public CardInterface push(CardInterface card) {
         return cardStack.push(card);
     }
 
-    public Card peek() {
+    public CardInterface peek() {
         return cardStack.peek();
     }
 

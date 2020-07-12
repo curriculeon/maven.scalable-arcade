@@ -3,6 +3,7 @@ package com.github.curriculeon.casino.game.cardgame.highlow;
 import com.github.curriculeon.casino.game.cardgame.utils.AbstractCardGame;
 import com.github.curriculeon.casino.game.cardgame.utils.Deck;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.profile.ProfileInterface;
 import com.github.curriculeon.casino.profile.ProfileManager;
 
@@ -29,7 +30,7 @@ public class HighLowGame extends AbstractCardGame<HighLowPlayer> {
         getPlayers().forEach(player -> player.addCard(deck.pop()));
     }
 
-    public Card getCurrentFaceUpValue() {
+    public CardInterface getCurrentFaceUpValue() {
         return getDiscardPile().getOwnerAndCardAtIndex(0).getValue();
     }
 

@@ -2,9 +2,10 @@ package com.github.curriculeon.casino.game.cardgame.utils.card;
 
 /**
  * Created by leon.hunter on 2/1/2017.
+ * @ATTENTION_TO_STUDENTS - You are advised against modifying this class
  */
 
-public class Card {
+public class Card implements CardInterface {
 
     private final Rank rank;
     private final Suit suit;

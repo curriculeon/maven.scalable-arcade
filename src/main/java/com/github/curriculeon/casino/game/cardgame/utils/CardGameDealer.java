@@ -3,6 +3,7 @@ package com.github.curriculeon.casino.game.cardgame.utils;
 import com.github.curriculeon.casino.game.cardgame.AbstractCardGamePlayer;
 import com.github.curriculeon.casino.game.cardgame.CardGamePlayerInterface;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.profile.ProfileInterface;
 
 /**
@@ -20,8 +21,8 @@ public class CardGameDealer extends AbstractCardGamePlayer {
         deck.shuffle();
     }
 
-    public Card deal(CardGamePlayerInterface cardGamePlayer) {
-        Card card = deck.pop();
+    public CardInterface deal(CardGamePlayerInterface cardGamePlayer) {
+        CardInterface card = deck.pop();
         cardGamePlayer.addCard(card);
         return card;
     }
