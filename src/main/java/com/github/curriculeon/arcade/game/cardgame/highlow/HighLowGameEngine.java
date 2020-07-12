@@ -22,10 +22,7 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
 
     @Override
     public void run() {
-        HighLowPlayer dealer = new HighLowPlayer(new Profile("DEALER", Double.MAX_VALUE, null));
-
         do {
-            getGame().getDiscardPile().add(dealer, getGame().getDeck().pop());
             super.run();
             getConsole().println(
                     "The winner is [ %s ], with a card value of [ %s ]",
@@ -36,26 +33,12 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
     @Override
     public void evaluateTurn(HighLowPlayer currentPlayer) {
         HighLowGameDecisionMenu highLowGameDecision = new HighLowGameDecisionMenu();
-        Boolean playerTurnIsOver;
+        boolean playerTurnIsOver;
         do {
             HighLowGameDecision decision = highLowGameDecision.getInput();
             decision.perform(getGame(), currentPlayer);
-
-            if (highestScoringPlayerAndCard != null) {
-                Integer highestScoringPlayerCardValue = highestScoringPlayerAndCard
-                        .getValue()
-                        .getValue();
-
-                Integer currentPlayerCardValue = getGame()
-                        .getCurrentFaceUpValue()
-                        .getValue();
-
-                if (highestScoringPlayerCardValue < currentPlayerCardValue) {
-                    highestScoringPlayerAndCard = new Pair<>(currentPlayer, getGame().getCurrentFaceUpValue());
-                }
-            } else {
-                this.highestScoringPlayerAndCard = getGame().getDiscardPile().getOwnerAndCardAtIndex(0);
-            }
+            getGame().evaluateCardAndPlayer(getGame().getDiscardPile().getOwnerAndCardAtIndex(0));
+            this.highestScoringPlayerAndCard = getGame().getHighestScoringPlayerAndCard();
 
             playerTurnIsOver = HighLowPlayer.DecisionState.HIGH.equals(currentPlayer.getDecision()) ||
                     HighLowPlayer.DecisionState.LOW.equals(currentPlayer.getDecision()) ||
