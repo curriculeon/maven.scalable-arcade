@@ -32,6 +32,10 @@ public class HighLowPlayer extends AbstractCardGamePlayer {
         this.numberOfPoints = getNumberOfPoints()+numberOfPointsToIncreaseBy;
     }
 
+    public void decreasePoints(int numberOfPointsToDecreaseBy) {
+        increasePoints(-numberOfPointsToDecreaseBy);
+    }
+
     public void setDecision(DecisionState decision) {
         this.decision = decision;
     }

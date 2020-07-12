@@ -90,7 +90,7 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
 
         if (previousPlayerClaimIsTrue) {
             previousPlayer.increasePoints(1);
-            player.increasePoints(-1);
+            player.decreasePoints(1);
         }
     });
 
