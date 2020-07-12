@@ -54,7 +54,7 @@ public class HighLowGameEngine extends AbstractGameEngine<HighLowPlayer, HighLow
                     highestScoringPlayerAndCard = new Pair<>(currentPlayer, getGame().getCurrentFaceUpValue());
                 }
             } else {
-                this.highestScoringPlayerAndCard = new Pair<>(currentPlayer, getGame().getCurrentFaceUpValue());
+                this.highestScoringPlayerAndCard = getGame().getDiscardPile().getOwnerAndCardAtIndex(0);
             }
 
             playerTurnIsOver = HighLowPlayer.DecisionState.HIGH.equals(currentPlayer.getDecision()) ||
