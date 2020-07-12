@@ -70,9 +70,7 @@ public enum HighLowGameDecision implements GameDecisionInterface<HighLowGame, Hi
                 .getOwnerAndCardAtIndex(1)
                 .getValue();
 
-        Boolean previousPlayerDecidedHigh = previousPlayer
-                .getDecision()
-                .equals(HighLowPlayer.DecisionState.HIGH);
+        Boolean previousPlayerDecidedHigh = previousPlayer.getDecision().equals(HighLowPlayer.DecisionState.HIGH);
         Boolean previousPlayerDecidedLow = previousPlayer.getDecision().equals(HighLowPlayer.DecisionState.LOW);
         Boolean previousPlayerHasHigh = previousPreviousCard.getValue() < previousCard.getValue();
         Boolean previousPlayerHasLow = previousPreviousCard.getValue() > previousCard.getValue();
