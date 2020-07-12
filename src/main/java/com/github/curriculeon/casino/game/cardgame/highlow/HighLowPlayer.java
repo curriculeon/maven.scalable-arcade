@@ -2,6 +2,7 @@ package com.github.curriculeon.casino.game.cardgame.highlow;
 
 import com.github.curriculeon.casino.game.cardgame.AbstractCardGamePlayer;
 import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
+import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.profile.ProfileInterface;
 
 /**
@@ -19,7 +20,7 @@ public class HighLowPlayer extends AbstractCardGamePlayer {
     }
 
     @Override
-    public void removeCard(Card card) {
+    public void removeCard(CardInterface card) {
         super.removeCard(card);
         increasePoints(1);
     }
@@ -40,7 +41,7 @@ public class HighLowPlayer extends AbstractCardGamePlayer {
         return decision;
     }
 
-    public Card getCard() {
+    public CardInterface getCard() {
         return getHand().get(0);
     }
 }

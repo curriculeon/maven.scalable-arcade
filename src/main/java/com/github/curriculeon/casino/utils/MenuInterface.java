@@ -11,7 +11,14 @@ public interface MenuInterface
     SomeDecision[] getDecisions();
 
     default SomeDecision getInput() {
-        return getValueOf(getInputFromUser());
+        String userInput = null;
+        try {
+            userInput = getInputFromUser();
+            return getValueOf(userInput);
+        } catch(IllegalArgumentException iae) {
+            getConsole().println("[ %s ] is not a valid user-input.\nPlease try again.", userInput);
+            return getInput();
+        }
     }
 
     default void display() {

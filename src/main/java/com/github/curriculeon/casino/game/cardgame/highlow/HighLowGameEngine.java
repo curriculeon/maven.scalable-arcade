@@ -1,6 +1,5 @@
 package com.github.curriculeon.casino.game.cardgame.highlow;
 
-import com.github.curriculeon.casino.game.cardgame.utils.card.Card;
 import com.github.curriculeon.casino.game.cardgame.utils.card.CardInterface;
 import com.github.curriculeon.casino.game.utils.AbstractGameEngine;
 import com.github.curriculeon.casino.profile.Profile;
