@@ -9,7 +9,7 @@ import com.github.curriculeon.arcade.ArcadeInterface;
  */
 public class Main {
     public static void main(String[] args) {
-        ArcadeInterface casino = new Arcade();
-        casino.run();
+        ArcadeInterface arcade = new Arcade();
+        arcade.run();
     }
 }

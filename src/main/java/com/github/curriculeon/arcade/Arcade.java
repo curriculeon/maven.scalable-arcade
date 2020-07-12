@@ -1,5 +1,6 @@
 package com.github.curriculeon.arcade;
 
+import com.github.curriculeon.arcade.profile.Profile;
 import com.github.curriculeon.arcade.profile.ProfileManager;
 import com.github.curriculeon.arcade.profile.ProfileManagerInterface;
 import com.github.curriculeon.arcade.utils.AbstractDecisionMenu;
@@ -27,6 +28,8 @@ public final class Arcade extends AbstractDecisionMenu<ArcadeDecision> implement
 
     @Override
     public void run() {
+        getProfileManager().registerProfile(new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 0L));
+        getProfileManager().registerProfile(new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 1L));
         while (true) {
             getInput().perform(this);
         }

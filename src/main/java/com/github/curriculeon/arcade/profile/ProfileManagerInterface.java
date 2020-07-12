@@ -75,7 +75,7 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
     }
 
 
-    default void registerPlayer(ProfileInterface profile) {
+    default void registerProfile(ProfileInterface profile) {
         String name = profile.getName();
         long profileId = profile.getId();
         getConsole().println("Checking database for user [ %s ].", name);
@@ -84,8 +84,8 @@ public interface ProfileManagerInterface extends InputOutputSocketInterface {
             profile.printInformation();
         } else {
             getConsole().println("The Casino has registered a new profile!");
-            getConsole().println("Profile-name is " + name);
-            getConsole().println("Profile-id is " + profileId);
+            getConsole().println("Profile-name is [ %s ]", name);
+            getConsole().println("Profile-id is [ %s ]", profileId);
             getProfiles().add(profile);
         }
     }

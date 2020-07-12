@@ -15,9 +15,6 @@ public enum ProfileManager implements ProfileManagerInterface {
 
     ProfileManager(List<ProfileInterface> profiles) {
         this.profiles = profiles;
-        profiles.addAll(Arrays.asList(
-                new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 0L),
-                new Profile("test-profile+" + System.nanoTime(), Double.MAX_VALUE, 1L)));
     }
 
     ProfileManager() {
