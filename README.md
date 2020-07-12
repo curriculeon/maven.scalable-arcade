@@ -23,7 +23,7 @@
 3. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
 ### Part 4 - Create `HighLowGame` dice-game
-1. Implement `HighLow` using `Dice` objects in a package named `arcage.game.dicegame.highlow`.
+1. Implement `HighLow` using `Dice` objects in a package named `arcade.game.dicegame.highlow`.
 2. Create tests for at least 10 methods of the classes in `arcade.game.dicegame.highlow`.
 3. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
