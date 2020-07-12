@@ -6,7 +6,6 @@ package com.github.curriculeon.arcade.game.cardgame.utils.card;
  */
 
 public class Card implements CardInterface {
-
     private final Rank rank;
     private final Suit suit;
 
@@ -15,10 +14,12 @@ public class Card implements CardInterface {
         this.suit = suit;
     }
 
+    @Override
     public Rank getRank() {
         return rank;
     }
 
+    @Override
     public Suit getSuit() {
         return this.suit;
     }
@@ -28,6 +29,6 @@ public class Card implements CardInterface {
     }
 
     public String toString() {
-        return getRank().name() + " of " + getSuit().name();
+        return rank.name() + " of " + suit.name();
     }
 }

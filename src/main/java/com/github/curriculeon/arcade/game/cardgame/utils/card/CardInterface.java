@@ -1,9 +1,9 @@
 package com.github.curriculeon.arcade.game.cardgame.utils.card;
 
 public interface CardInterface {
-    Rank getRank();
+    RankInterface getRank();
 
-    Suit getSuit();
+    SuitInterface getSuit();
 
     int getValue();
 

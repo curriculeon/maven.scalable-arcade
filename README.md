@@ -13,8 +13,8 @@
 ### Part 1.1 - Check Build
 * Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
-### Part 2 - Create `HighLowGameTest` implementation
-1. Create tests for at least 5 of the methods of each of classes in `arcade.game.cardgame.highlow`.
+### Part 2 - Create `HighLow` tests
+1. Create tests for at least 5 of the methods of the classes in `arcade.game.cardgame.highlow`.
 2. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
 ### Part 3 - Create `BlackJack` implementation
