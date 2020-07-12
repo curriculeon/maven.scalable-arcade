@@ -10,7 +10,7 @@
 
 ## Instructions
 
-### Part 1.1 - Check Build
+### Part 1 - Check Build
 * Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
 ### Part 2 - Create `HighLow` tests
