@@ -1,15 +1,33 @@
-# Scalable Arcade Application
+# Scalable Arcade Simulation
 
-* **Objective** - To create a product...
-* **Purpose** - To gain familiarity the following features...
+* **Objective** - To extend a preexisting arcade with built-in infrastructure.
+* **Purpose** - To gain familiarity the following features:
+    * Generics
+    * Design Patterns
 
 
 
 
-## Objective
+## Instructions
 
-#### Part 1 - ...
-* Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate. 
+### Part 1.1 - Check Build
+* Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
+
+### Part 2 - Create `HighLowGameTest` implementation
+1. Create tests for at least 5 of the methods of each of classes in `arcade.game.cardgame.highlow`.
+2. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
+
+### Part 3 - Create `BlackJack` implementation
+1. Implement `Blackjack` mimicking the same package and class structures of `arcade.game.cardgame.highlow`.
+2. Create tests for at least 10 methods of the classes in `arcade.game.cardgame.blackjack`
+3. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
+
+### Part 4 - Create `HighLowGame` dice-game
+* Implement `HighLow` using `Dice` objects in a package named `arcage.game.dicegame.highlow`.
+2. Create tests for at least 10 methods of the classes in `arcade.game.dicegame.highlow`.
+3. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
+
+ 
 
 
 
