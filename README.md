@@ -4,6 +4,7 @@
 * **Purpose** - To gain familiarity the following features:
     * Generics
     * Design Patterns
+* **Tip** - All modifications should take place in children of package named `arcade.game`.
 
 
 
