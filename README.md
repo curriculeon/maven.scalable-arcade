@@ -32,33 +32,22 @@
 <hr><hr>
  
 ## Developmental Notes
-
-
-## Specs
-* The project should include some concept of each of the following classes.
+* The following documentation may be slightly [stale](https://stackoverflow.com/questions/1563319/what-is-stale-state).
 
 ### `Profile` class
 * **Description:**
-	* `Profile` stores a casino-visitor's `id`, `name`, and `balance`.
-* `Profile` objects should be created within the context of a casino.
-* `Profile` objects store `profileId`, `username`, and `balance`.
+	* `Profile` stores a arcade-visitor's `id`, `name`, and `balance`.
 
 ### `PlayerInterface` interface
 * **Description:**
-	* `PlayerInterface` is a contract to ensure that all players have reference to a `profile`, `name`, and `id`.
-
-* `PlayerInterface` should declare 3 methods
-	* `Profile getProfile()`
-	* `String getName()`
-	* `Long getId()`
-
+	* `PlayerInterface` is a contract to ensure that all players have reference to a `profile`.
 
 ### `Player` class
 * **Description:**
 	* Represents a player within the context of a game.
  	* should [cease to exist](https://stackoverflow.com/questions/3798424/what-is-the-garbage-collector-in-java) upon termination of a game.
 * `Player` should implement `PlayerInterface`
-* `Player` objects should be created within the context of a game.
+* `Player` objects should be created within the scope of a game.
 
 ### `GameInterface` interface
 * **Description:**
