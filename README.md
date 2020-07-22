@@ -28,10 +28,81 @@
 2. Create tests for at least 10 methods of the classes in `arcade.game.dicegame.highlow`.
 3. Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate.
 
+
+<hr><hr>
  
+## Developmental Notes
+
+
+## Specs
+* The project should include some concept of each of the following classes.
+
+### `Profile` class
+* **Description:**
+	* `Profile` stores a casino-visitor's `id`, `name`, and `balance`.
+* `Profile` objects should be created within the context of a casino.
+* `Profile` objects store `profileId`, `username`, and `balance`.
+
+### `PlayerInterface` interface
+* **Description:**
+	* `PlayerInterface` is a contract to ensure that all players have reference to a `profile`, `name`, and `id`.
+
+* `PlayerInterface` should declare 3 methods
+	* `Profile getProfile()`
+	* `String getName()`
+	* `Long getId()`
+
+
+### `Player` class
+* **Description:**
+	* Represents a player within the context of a game.
+ 	* should [cease to exist](https://stackoverflow.com/questions/3798424/what-is-the-garbage-collector-in-java) upon termination of a game.
+* `Player` should implement `PlayerInterface`
+* `Player` objects should be created within the context of a game.
+
+### `GameInterface` interface
+* **Description:**
+	* Represents a game which handles some type of player.
+* should be parameterized with a generic type whose upper bound is `PlayerInterface`.
+	* e.g. - `SomePlayerType` is a subclass of `PlayerInterface`.
+	* This restricts the types of players this game can interact with.
+* `GameInterface` should declare each of the following methods:
+	* `TypeOfPlayer[] getPlayers()`
+	* `TypeOfPlayer getPlayer(Long playerId)`
+	* `void addPlayer(TypeOfPlayer player)`
+	* `void removePlayer(TypeOfPlayer player)`
+	* `Boolean contains(TypeOfPlayer player)`
+
+
+### `GameEngineInterface` interface
+* **Description:**
+	* `GameEngineInterface` is a contract which ensures a specific type of `GameEngine` operates on a specific type of `Player` and a specific type of `Game`
+
+* should be parameterized with two generic types
+	* `GameTypePlayer` a sub class of `PlayerInterface`
+	* `GameType` a sub class of `GameInterface<GameTypePlayer>`
+
+* should declare three method signatures
+	* `GameType getGame()`
+		* return the composite Game object to the client.
+	* `void evaluateTurn(GameTypePlayer player)`
+		* evaluate the turn of a player,
+	* `void run()`
+		* begin game
+
+
+### `GameEngine` abstract class
+* **Description**
+	* `GameEngine` ensures all sub-classes provide a `Game` object upon instantiation.
+* should be parameterized with two generic types
+	* `GameTypePlayer` a sub class of `PlayerInterface`
+	* `GameType` a sub class of `GameInterface<GameTypePlayer>`
+* should implement a `GameEngineInterface<GameType, GameTypePlayer>`
+* should defer the definition of `evaluateTurn` and `run` to sub-classes.
 
 
 
+<hr><hr><hr>
 
 ## How to Download
 
