@@ -6,6 +6,7 @@
     * Design Patterns
 * **Tip** - All modifications should take place in children of package named `arcade.game`.
 
+<img src="./uml.png">
 
 
 
