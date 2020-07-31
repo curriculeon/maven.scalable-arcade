@@ -6,7 +6,7 @@
     * Design Patterns
 * **Tip** - All modifications should take place in children of package named `arcade.game`.
 
-<img src="./uml.png">
+<img src="https://raw.githubusercontent.com/curriculeon/maven.scalable-arcade/master/uml.png">
 
 
 
