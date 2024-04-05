@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <enumeration id="1" language="java" name="com.github.curriculeon.arcade.ArcadeDecision" 
+  <enumeration id="1" language="java" name="com.github.curriculeon.arcade.lib.ArcadeDecision"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/ArcadeDecision.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -12,7 +12,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="2" language="java" name="com.github.curriculeon.arcade.Arcade" project="maven.scalable-arcade" 
+  <class id="2" language="java" name="com.github.curriculeon.arcade.lib.Arcade" project="maven.scalable-arcade"
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/Arcade.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2327" y="1451"/>    
@@ -22,7 +22,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="3" language="java" name="com.github.curriculeon.arcade.ArcadeInterface" project="maven.scalable-arcade" 
+  <interface id="3" language="java" name="com.github.curriculeon.arcade.lib.ArcadeInterface" project="maven.scalable-arcade"
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/ArcadeInterface.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2726" y="1478"/>    
@@ -32,7 +32,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="4" language="java" name="com.github.curriculeon.arcade.game.PlayerInterface" 
+  <interface id="4" language="java" name="com.github.curriculeon.arcade.lib.game.PlayerInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/PlayerInterface.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -43,7 +43,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="5" language="java" name="com.github.curriculeon.arcade.game.Player" project="maven.scalable-arcade" 
+  <class id="5" language="java" name="com.github.curriculeon.arcade.lib.game.Player" project="maven.scalable-arcade"
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/Player.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1715" y="890"/>    
@@ -53,7 +53,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="com.github.curriculeon.arcade.game.cardgame.CardGamePlayerInterface" 
+  <interface id="6" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.CardGamePlayerInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/CardGamePlayerInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -64,7 +64,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="com.github.curriculeon.arcade.game.cardgame.AbstractCardGamePlayer" 
+  <class id="7" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.AbstractCardGamePlayer"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/AbstractCardGamePlayer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -76,7 +76,7 @@
     </display>  
   </class>  
   <enumeration id="8" language="java" 
-    name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowPlayer.DecisionState" 
+    name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowPlayer.DecisionState"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowPlayer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -87,7 +87,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="9" language="java" name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowPlayer" 
+  <class id="9" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowPlayer"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowPlayer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -98,7 +98,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowGameEngine" 
+  <class id="10" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowGameEngine"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowGameEngine.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -109,7 +109,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="11" language="java" name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowGameDecision" 
+  <enumeration id="11" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowGameDecision"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowGameDecision.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -120,7 +120,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="12" language="java" name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowGameDecisionMenu" 
+  <class id="12" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowGameDecisionMenu"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowGameDecisionMenu.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -131,7 +131,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="com.github.curriculeon.arcade.utils.AbstractDecisionMenu" 
+  <class id="13" language="java" name="com.github.curriculeon.arcade.lib.utils.AbstractDecisionMenu"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/utils/AbstractDecisionMenu.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -142,7 +142,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="14" language="java" name="com.github.curriculeon.arcade.utils.MenuInterface" 
+  <interface id="14" language="java" name="com.github.curriculeon.arcade.lib.utils.MenuInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/utils/MenuInterface.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -153,7 +153,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="15" language="java" name="com.github.curriculeon.arcade.utils.DecisionInterface" 
+  <interface id="15" language="java" name="com.github.curriculeon.arcade.lib.utils.DecisionInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/utils/DecisionInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -164,7 +164,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="16" language="java" name="com.github.curriculeon.arcade.profile.Profile" project="maven.scalable-arcade" 
+  <class id="16" language="java" name="com.github.curriculeon.arcade.lib.profile.Profile" project="maven.scalable-arcade"
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/Profile.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2003" y="887"/>    
@@ -174,7 +174,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="17" language="java" name="com.github.curriculeon.arcade.profile.ProfileInterface" 
+  <interface id="17" language="java" name="com.github.curriculeon.arcade.lib.profile.ProfileInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/ProfileInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -185,7 +185,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="18" language="java" name="com.github.curriculeon.arcade.profile.ProfileManagerInterface" 
+  <interface id="18" language="java" name="com.github.curriculeon.arcade.lib.profile.ProfileManagerInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/ProfileManagerInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -196,7 +196,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="19" language="java" name="com.github.curriculeon.arcade.profile.ProfileManagerMenu" 
+  <class id="19" language="java" name="com.github.curriculeon.arcade.lib.profile.ProfileManagerMenu"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/ProfileManagerMenu.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -207,7 +207,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="20" language="java" name="com.github.curriculeon.arcade.profile.ProfileManagerSelection" 
+  <enumeration id="20" language="java" name="com.github.curriculeon.arcade.lib.profile.ProfileManagerSelection"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/ProfileManagerSelection.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -218,7 +218,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <enumeration id="21" language="java" name="com.github.curriculeon.arcade.profile.ProfileManager" 
+  <enumeration id="21" language="java" name="com.github.curriculeon.arcade.lib.profile.ProfileManager"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/profile/ProfileManager.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -229,7 +229,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="22" language="java" name="com.github.curriculeon.arcade.game.utils.AbstractGame" 
+  <class id="22" language="java" name="com.github.curriculeon.arcade.lib.game.utils.AbstractGame"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/AbstractGame.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -240,7 +240,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="23" language="java" name="com.github.curriculeon.arcade.game.utils.GameDecisionInterface" 
+  <interface id="23" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameDecisionInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameDecisionInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -251,7 +251,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <enumeration id="24" language="java" name="com.github.curriculeon.arcade.game.utils.GameSelection" 
+  <enumeration id="24" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameSelection"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameSelection.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -262,7 +262,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="25" language="java" name="com.github.curriculeon.arcade.game.utils.GameSelectionMenu" 
+  <class id="25" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameSelectionMenu"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameSelectionMenu.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -273,7 +273,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="com.github.curriculeon.arcade.game.utils.AbstractGameEngine" 
+  <class id="26" language="java" name="com.github.curriculeon.arcade.lib.game.utils.AbstractGameEngine"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/AbstractGameEngine.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -284,7 +284,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="27" language="java" name="com.github.curriculeon.arcade.game.utils.GameEngineInterface" 
+  <interface id="27" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameEngineInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameEngineInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -295,7 +295,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="28" language="java" name="com.github.curriculeon.arcade.game.utils.GameInterface" 
+  <interface id="28" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -306,7 +306,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="29" language="java" name="com.github.curriculeon.arcade.game.cardgame.highlow.HighLowGame" 
+  <class id="29" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.highlow.HighLowGame"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/highlow/HighLowGame.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -317,7 +317,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="30" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.CardGameInterface" 
+  <interface id="30" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.CardGameInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/CardGameInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -328,7 +328,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="31" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.CardGameDealer" 
+  <class id="31" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.CardGameDealer"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/CardGameDealer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -339,7 +339,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.AbstractCardGame" 
+  <class id="32" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.AbstractCardGame"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/AbstractCardGame.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -350,7 +350,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.DiscardPile" 
+  <class id="33" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.DiscardPile"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/DiscardPile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -361,7 +361,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.Deck" 
+  <class id="34" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.Deck"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/Deck.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -372,7 +372,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="35" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.RankInterface" 
+  <interface id="35" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.RankInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/RankInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -383,7 +383,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="36" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.CardInterface" 
+  <interface id="36" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.CardInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/CardInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -394,7 +394,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <enumeration id="37" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.Rank" 
+  <enumeration id="37" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.Rank"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/Rank.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -405,7 +405,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <enumeration id="38" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.Suit" 
+  <enumeration id="38" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.Suit"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/Suit.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -416,7 +416,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <interface id="39" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.SuitInterface" 
+  <interface id="39" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.SuitInterface"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/SuitInterface.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -427,7 +427,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="40" language="java" name="com.github.curriculeon.arcade.game.cardgame.utils.card.Card" 
+  <class id="40" language="java" name="com.github.curriculeon.arcade.lib.game.cardgame.utils.card.Card"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/cardgame/utils/card/Card.java" 
     binary="false" corner="BOTTOM_RIGHT">    
