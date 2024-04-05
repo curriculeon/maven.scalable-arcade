@@ -1,6 +1,7 @@
-package com.github.curriculeon.arcade.lib.game.utils;
+package com.github.curriculeon.arcade.service.utils;
 
 
+import com.github.curriculeon.arcade.lib.game.utils.GameEngineInterface;
 import com.github.curriculeon.arcade.service.blackjack.BlackJackGameEngine;
 import com.github.curriculeon.arcade.service.highlow.HighLowGameEngine;
 import com.github.curriculeon.arcade.lib.utils.DecisionInterface;

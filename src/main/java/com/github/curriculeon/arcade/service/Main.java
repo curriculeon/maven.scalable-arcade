@@ -1,7 +1,7 @@
 package com.github.curriculeon.arcade.service;
 
-import com.github.curriculeon.arcade.lib.Arcade;
 import com.github.curriculeon.arcade.lib.ArcadeInterface;
+import com.github.curriculeon.arcade.service.utils.Arcade;
 
 /**
  * Created by leon on 1/29/2017.

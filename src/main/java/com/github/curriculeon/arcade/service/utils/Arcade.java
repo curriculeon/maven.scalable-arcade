@@ -1,5 +1,6 @@
-package com.github.curriculeon.arcade.lib;
+package com.github.curriculeon.arcade.service.utils;
 
+import com.github.curriculeon.arcade.lib.ArcadeInterface;
 import com.github.curriculeon.arcade.lib.profile.Profile;
 import com.github.curriculeon.arcade.lib.profile.ProfileManager;
 import com.github.curriculeon.arcade.lib.profile.ProfileManagerInterface;
@@ -17,7 +18,7 @@ public final class Arcade extends AbstractDecisionMenu<ArcadeDecision> implement
     }
 
     @Override
-    public final ProfileManagerInterface getProfileManager() {
+    public ProfileManagerInterface getProfileManager() {
         return profileManager;
     }
 

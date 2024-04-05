@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <enumeration id="1" language="java" name="com.github.curriculeon.arcade.lib.ArcadeDecision"
+  <enumeration id="1" language="java" name="com.github.curriculeon.arcade.service.utils.ArcadeDecision"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/ArcadeDecision.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -12,7 +12,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="2" language="java" name="com.github.curriculeon.arcade.lib.Arcade" project="maven.scalable-arcade"
+  <class id="2" language="java" name="com.github.curriculeon.arcade.service.utils.Arcade" project="maven.scalable-arcade"
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/Arcade.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2327" y="1451"/>    
@@ -251,7 +251,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <enumeration id="24" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameSelection"
+  <enumeration id="24" language="java" name="com.github.curriculeon.arcade.service.utils.GameSelection"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameSelection.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -262,7 +262,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="25" language="java" name="com.github.curriculeon.arcade.lib.game.utils.GameSelectionMenu"
+  <class id="25" language="java" name="com.github.curriculeon.arcade.service.utils.GameSelectionMenu"
     project="maven.scalable-arcade" 
     file="/maven.scalable-arcade/src/main/java/com/github/curriculeon/arcade/game/utils/GameSelectionMenu.java" 
     binary="false" corner="BOTTOM_RIGHT">    

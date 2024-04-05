@@ -1,7 +1,6 @@
-package com.github.curriculeon.arcade.lib;
+package com.github.curriculeon.arcade.service.utils;
 
-import com.github.curriculeon.arcade.lib.game.utils.GameSelection;
-import com.github.curriculeon.arcade.lib.game.utils.GameSelectionMenu;
+import com.github.curriculeon.arcade.lib.ArcadeInterface;
 import com.github.curriculeon.arcade.lib.profile.ProfileManagerMenu;
 import com.github.curriculeon.arcade.lib.profile.ProfileManagerSelection;
 import com.github.curriculeon.arcade.lib.utils.DecisionInterface;

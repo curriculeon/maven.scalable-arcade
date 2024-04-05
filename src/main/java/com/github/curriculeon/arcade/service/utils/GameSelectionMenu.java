@@ -1,4 +1,4 @@
-package com.github.curriculeon.arcade.lib.game.utils;
+package com.github.curriculeon.arcade.service.utils;
 
 import com.github.curriculeon.arcade.lib.utils.AbstractDecisionMenu;
 
